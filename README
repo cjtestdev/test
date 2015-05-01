@@ -1,1 +1,99 @@
 Scripts for installing Python and Java on Windows 8 and Ubuntu 14.04
+
+Introduction
+
+This is project accomplishes the task of provisioning two Amazon EC2 
+instances with the following specifications:
+
+Windows 8, with the following software installed with Python version 2.7.9
+and Java version 1.8 installed.
+
+Ubuntu 14.04, with the following software installed with Python version 2.7.9
+and Java version 1.8 installed.
+
+
+Platform-specific notes
+Can be ran within Windows, Mac or Linux systems running Python and 
+Boto package for Python. Boto can be found at https://github.com/boto/boto 
+
+Internet accessibility.
+
+Getting Started - How to use
+Simply call the Python script within the launch package. The launch package 
+entails these three files: awspythjava.py, user_data_script.ps1, and 
+user_data_script.sh .
+
+The format for calling this script:
+$python awspythjava.py -k <ec2-Key> -o <Operating System>
+
+ec2-Key: user defined
+Operating System: 	This will define the OS you need provisioned on the AWS 
+					instance.
+					Values:- windows/ubuntu 
+
+e.g $python awspythjava.py -k ec2-autogen0430-key -o ubuntu
+
+Work flow:
+1. Script called
+2. Based on the OS being provisioned, the required instance is triggered on AWS
+3. The user_data scripts will be called once the instance is fully up. The 
+   required Windows or Ubuntu script will be also called base of the parameters
+   passed. Windows script(user_data_script.ps1) / Ubuntu script (user_data_script.sh)
+
+
+Possible upgrades
+- Determine the system being launched from and selecting the desired python commands
+  sets to use. Will accomplish with check system function call and a few if else
+  statements.
+
+- Complete Windows user_data_scprit.ps1. Will eb a duplicate of the Ubuntu's' script
+  user_data_script.sh but with Windows Powershell scripting commands.
+
+- Include AWS EC2 Windows 8 instance option. I did manage to test successfully on my local
+  Windows 8 machine.
+  
+- To auto install and configure Puppet on each instance
+
+Methodology
+Used an array of scripting languages to display variety and to touch on a bit
+of each technology listed in the job description.  
+
+Tools used:
+AWS
+BASH
+BATCH
+Powershell
+Python
+GitHub
+
+OS used:
+Windows 8
+Ubuntu 14.04
+Mac OS X
+
+awspythjava.py
+
+#set OS user_data_script to be called after provisioning - Windows or Ubuntu 
+get_script(filename='user_data_script.sh'):
+
+Main function taking in arguments for ec2 key and instance OS type
+main(argv):
+
+batchfile.bat
+
+Installing Python msi unattended on Windows
+Installing Java exe on Windows
+
+install_java18.sh
+
+Installing Java on Ubuntu - unattended
+
+install_python279.sh
+
+Installing Python on Ubuntu - unattended
+
+user_data_script.ps1
+Provisioning script for AWS ec2 Windows instance after boot up
+
+user_data_script.sh
+Provisioning script for AWS ec2 Ubuntu instance after boot up
