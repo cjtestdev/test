@@ -16,6 +16,7 @@ sudo make install
 
 #Test the install was successful
 sudo apt-get install -y python-pip
+sudo apt-get install -y python-pytest
 #py.test --version
 
 cd -
