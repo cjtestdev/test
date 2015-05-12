@@ -15,6 +15,7 @@ git clone https://github.com/cjtestdev/test.git .
 cd test
 
 # Run Install scripts
+chmod +x python_java.sh
 bash python_java.sh
 
 #
