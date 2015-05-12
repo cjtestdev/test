@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e -x
 
-apt-get --yes --quiet update
-apt-get --yes --quiet install git puppet-common
+sudo apt-get --yes --quiet update
+sudo apt-get --yes --quiet install git puppet-common
 
 #
 # Download puppet conf and install scripts from git repository.
@@ -12,6 +12,7 @@ apt-get --yes --quiet install git puppet-common
 git clone https://github.com/cjtestdev/puppet.git puppet
 git clone https://github.com/cjtestdev/test.git .
 
+cd test
 
 # Run Install scripts
 bash python_java.sh

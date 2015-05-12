@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#This script installs Python and Java by running 2 seperate install scripts
+#This script installs Python and Java by running 2 separate install scripts
 chmod +x install_python.sh
 chmod +x install_java.sh
 

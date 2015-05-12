@@ -54,6 +54,12 @@ def main(argv):
    
    if ostype == 'windows':
    		# launch windows powershell script within user_data
+		# Load AWS PowerShell Module
+		#import-module "C:\Program Files (x86)\AWS Tools\PowerShell\AWSPowerShell\AWSPowerShell.psd1"
+		
+		# To check if AWS PS module is accessible.
+		Get-AWSPowerShellVersion -ListServices
+		
 		get_script_os = 'user_date_script.ps1'   	
    		image_id_os =  'ami-cc93a8a4'  #(windows 8 image ID)
    
