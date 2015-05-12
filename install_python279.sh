@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script installs the python and its dependencies
 
-sudo apt-get install build-essential && sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+sudo apt-get --yes --quiet install -y build-essential && sudo apt-get --yes --quiet install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
 
 mkdir -m a=rwx -p /home/installs    
 cd ~/home/installs/
