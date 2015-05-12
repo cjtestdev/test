@@ -3,6 +3,6 @@
 
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get --yes --quiet update
-sudo apt-get install --yes --quiet oracle-java8-installer 
-sudo apt-get install --yes --quiet oracle-java8-set-default
+sudo apt-get install --yes --quiet oracle-java8-installer -y
+sudo apt-get install --yes --quiet oracle-java8-set-default -y
 java -version
