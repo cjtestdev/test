@@ -16,7 +16,7 @@ sudo make install
 
 #Test the install was successful
 sudo apt-get install -y python-pip
-py.test --version
+#py.test --version
 
 cd -
 rm -rf Python-2.7.9
